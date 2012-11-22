@@ -3,3 +3,13 @@
 	background-color: #AAA;
 	padding: 45px 0 0 0;
 }
+
+.crm-tab-buttons.nav {
+	background-color: #dfefff;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+.crm-menu.navbar {
+	padding: 0 10px;
+}
