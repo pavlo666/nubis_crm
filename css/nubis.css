@@ -1,15 +1,34 @@
+html {
+	height: 100%;
+}
+
 .crm-header {
+	padding-top: 45px;
+}
+
+.crm-body{
 	color: #555;
-	background-color: #AAA;
-	padding: 45px 0 0 0;
+	background-color: #CCC;
+	height: 100%;
+}
+
+.crm-content.tabbable{
+	margin: 0 10px;
+	color: #000;
+	height: 75%;
+	min-height: 500px;
+	background-color: #FFF;
+}
+
+.crm-footer {
+	padding: 25px 0;
 }
 
 .crm-tab-buttons.nav {
 	background-color: #dfefff;
-	padding-left: 10px;
 	margin-bottom: 10px;
 }
 
-.crm-menu.navbar {
+.crm-task-board {
 	padding: 0 10px;
 }
