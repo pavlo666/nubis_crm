@@ -25,11 +25,11 @@ html {
 }
 
 .crm-tab-buttons.nav {
-	background-color: #dfefff;
+	background-color: #EEE;
 	margin-bottom: 10px;
 }
 
-.crm-task-board {
+.crm-task-board, .crm-calendar {
 	padding: 0 10px;
 }
 
