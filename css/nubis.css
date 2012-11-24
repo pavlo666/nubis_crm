@@ -33,10 +33,6 @@ html {
 	padding: 0 10px;
 }
 
-.crm-task-content {
-	
-}
-
 .crm-task-content .crm-task-container {
 	list-style: none;
 	min-height: 400px;
@@ -55,9 +51,9 @@ html {
 	margin: 5px 10px;
 	padding: 5px 10px;
 	min-height: 30px;
+	background-color: #EEE;
 }
-
-.crm-task-content .crm-task span {
+.crm-task .crm-description {
 	line-height: 30px;
 }
 
