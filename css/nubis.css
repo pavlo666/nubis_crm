@@ -57,3 +57,20 @@ html {
 	line-height: 30px;
 }
 
+.crm-documents {
+	
+}
+.crm-documents .crm-doc-sidebar.span2 {
+	border-right: 1px solid #CCC;
+	min-height: 380px;
+}
+
+.crm-docs-table {
+	width: 100%;
+}
+
+.crm-docs-table .crm-header{	
+	height: 30px;
+	text-align: left;
+}
+
