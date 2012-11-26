@@ -77,6 +77,14 @@ html {
 	text-align: left;
 }
 
+.nav-list .icon-folder-close.icon{
+	float: left;
+	margin: 5px 5px 0 0;
+}
+
+.nav-list .icon-folder-close.icon.nested {
+	margin-left: 20px;
+}
 
 .crm-calendar .crm-calendar-sidebar.span2 {
 	border-right: 1px solid #CCC;
