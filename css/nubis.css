@@ -83,3 +83,17 @@ html {
 	min-height: 380px;
 }
 
+.crm-side-calendar {
+	margin-right: 20px;
+}
+
+.crm-side-calendar .crm-side-table {
+	width: 100%;
+	background-color: #EEE;
+	line-height: 25px;
+}
+
+.crm-side-calendar .crm-side-table TD {
+	text-align: center;
+}
+
