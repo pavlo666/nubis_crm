@@ -29,13 +29,16 @@ html {
 	margin-bottom: 10px;
 }
 
+
+
+
 .crm-task-board, .crm-calendar, .crm-docs, .crm-contacts, .crm-deals {
 	padding: 0 10px;
 }
 
 .crm-task-content .crm-task-container {
 	list-style: none;
-	min-height: 400px;
+	min-height: 335px;
 	border-right: 1px solid #CCC;
 	margin-left: 10px;
 }
@@ -72,5 +75,11 @@ html {
 .crm-docs-table .crm-header{	
 	height: 30px;
 	text-align: left;
+}
+
+
+.crm-calendar .crm-calendar-sidebar.span2 {
+	border-right: 1px solid #CCC;
+	min-height: 380px;
 }
 
