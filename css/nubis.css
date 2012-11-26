@@ -60,10 +60,7 @@ html {
 	line-height: 30px;
 }
 
-.crm-documents {
-	
-}
-.crm-documents .crm-doc-sidebar.span2 {
+.crm-docs .crm-doc-sidebar.span2, .crm-contacts .crm-contacts-sidebar.span2 {
 	border-right: 1px solid #CCC;
 	min-height: 380px;
 }
