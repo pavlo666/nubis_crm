@@ -108,3 +108,66 @@ html {
 	text-align: center;
 }
 
+.calendar-header {
+	width: 100%;
+}
+
+.calendar-header .all-day {
+	height: 10px;
+}
+
+.calendar-header .all-day TD {
+	border: 1px solid #DDD;
+}
+
+.calendar-header .separator {
+	height: 5px;
+}
+
+.calendar-header .cal-tz {
+	width: 60px;
+	vertical-align: bottom;
+	font-size: 9pt;
+	text-align: center;
+}
+
+.calendar-header  .cal-row {
+	height: 20px;
+}
+
+.calendar-header  .cal-row TD {
+	border: 1px solid #DDD;
+	border-bottom: 0;
+}
+
+.calendar-header  .cal-row-odd TD {
+	border-bottom: 1px solid #DDD;
+	border-top:1px dotted #DDD;
+}
+
+.calendar-header  .cal-hours {
+	width: 60px;
+	text-align: right;
+	font-size: 9pt;
+}
+
+.cal-event-cont {
+	position: relative;
+
+}
+
+.cal-event-cont .cal-event {
+	background: #c5d7ff;
+	position: absolute;
+	top: -6px;
+	border: 1px solid #87acff;
+	border-radius: 4px;
+	width: 100%;
+	height: 40px;
+}
+
+
+
+
+
+
