@@ -91,6 +91,7 @@ html {
 
 .nav-list.crm-calendar-list {
 	margin-top: 20px;
+	border-top: solid 1px #CCC;
 }
 
 .crm-calendar-list .nested {
