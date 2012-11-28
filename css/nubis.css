@@ -29,7 +29,7 @@ html {
 	margin-bottom: 10px;
 }
 
-.crm-task-board, .crm-calendar, .crm-docs, .crm-contacts, .crm-deals {
+.crm-task-board, .crm-calendar, .crm-docs, .crm-contacts, .crm-deals, .crm-calls {
 	padding: 0 10px;
 }
 
@@ -57,7 +57,7 @@ html {
 	line-height: 30px;
 }
 
-.crm-docs .crm-doc-sidebar.span2, .crm-contacts .crm-contacts-sidebar.span2 {
+.crm-docs .crm-doc-sidebar.span2, .crm-contacts .crm-contacts-sidebar.span2, .crm-calls .crm-calls-sidebar.span2{
 	border-right: 1px solid #CCC;
 	min-height: 380px;
 }
