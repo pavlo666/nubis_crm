@@ -628,7 +628,48 @@
 				
 				<!-- CONTACTS Menu-->
 			
-				<div class="navbar">
+				
+			
+				<!-- CONTACTS Content -->
+				<div class="container-fluid">
+					<div class="row-fluid">
+					<div class="span2">
+					
+					<!-- Quick Add -->
+					<div class="crm-sidebar">
+					  <div class="crm-sidebar-header">Quick Add</div>
+					  <div>
+								<div class="control-group">
+								  <label class="control-label" for="inputName">Name</label>
+								  <div class="controls">
+									<input type="text" id="inputName">
+									<span class="help-inline" style="display: none;">Incorect name...</span>
+								  </div>
+								</div>
+								<div class="control-group">
+								  <label class="control-label" for="inputEmail">Email</label>
+								  <div class="controls">
+									<input type="text" id="inputEmail">
+								  </div>
+								</div>
+								<div class="control-group">
+								  <label class="control-label" for="inputPhone">Phone</label>
+								  <div class="controls">
+									<input type="text" id="inputPhone">
+								  </div>
+								</div>
+						<div class="btn" id="new-contact">Add</div>
+						<div class="btn" id="clear">Clear</div>
+					  </div>
+					</div>
+					<div class="crm-sidebar">
+					  <div class="crm-sidebar-header">Filter</div>
+					</div>	
+				</div>
+				
+					<div class="span10">
+					
+					<div class="navbar">
 					  <div class="navbar-inner">
 						<div class="container">						  
 						  <div class="nav-collapse collapse navbar-responsive-collapse">
@@ -675,47 +716,7 @@
 						</div>
 					  </div><!-- /navbar-inner -->
 					</div>
-			
-				<!-- CONTACTS Content -->
-				<div class="container-fluid">
-					<div class="row-fluid">
-					<div class="span2 crm-contacts-sidebar">
 					
-					<!-- Quick Add -->
-					
-					<div> 
-						<div class="crm-quick-add-capture"> Quick Add </div>
-						<div id="quickAddContent" class="crm-quick-add-content">
-							<div class="control-group">
-							  <label class="control-label  pull-left" for="inputName">Name</label>
-							  <div class="controls pull-right">
-								<input type="text" id="inputName">
-								<span class="help-inline" style="display: none;">Incorect name...</span>
-							  </div>
-							</div>
-							<div class="control-group">
-							  <label class="control-label pull-left" for="inputEmail">Email</label>
-							  <div class="controls pull-right">
-								<input type="text" id="inputEmail">
-							  </div>
-							</div>
-							<div class="control-group">
-							  <label class="control-label pull-left" for="inputPhone">Phone</label>
-							  <div class="controls pull-right">
-								<input type="text" id="inputPhone">
-							  </div>
-							</div>
-						</div>
-					</div>
-					
-					
-					<!-- backbone test -->
-					<div class="btn" id="new-contact">Add</div>
-					<div class="btn" id="clear">Clear</div>
-					
-				</div>
-				
-					<div class="span10">
 							<table class="crm-docs-table table table-striped" cellspacing="0" cellpadding="0" id="crm-contacts">							
 								<thead>
 									<tr class="crm-header">

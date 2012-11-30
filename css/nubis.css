@@ -57,7 +57,7 @@ html {
 	line-height: 30px;
 }
 
-.crm-docs .crm-doc-sidebar.span2, .crm-contacts .crm-contacts-sidebar.span2, .crm-calls .crm-calls-sidebar.span2{
+.crm-docs .crm-doc-sidebar.span2, .crm-calls .crm-calls-sidebar.span2{
 	border-right: 1px solid #CCC;
 	min-height: 380px;
 }
@@ -178,24 +178,17 @@ html {
 	height: 40px;
 }
 
-.crm-quick-add-capture {
-    border-bottom: 1px solid #CCC;
+.crm-sidebar {
+	background: #f9f9f9;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	padding: 8px;
 }
 
-.crm-quick-add-content {
-	padding-top: 20px;
+.crm-sidebar .crm-sidebar-header {
+	text-align: center;
 }
-
-.crm-quick-add-content label {
-	padding-top: 4px;
-}
-
-.crm-quick-add-content .control-group {
-	padding-right: 8px;
-	height: 30px;
-}
-
-
 
 
 
