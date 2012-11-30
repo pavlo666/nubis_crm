@@ -178,6 +178,22 @@ html {
 	height: 40px;
 }
 
+.crm-quick-add-capture {
+    border-bottom: 1px solid #CCC;
+}
+
+.crm-quick-add-content {
+	padding-top: 20px;
+}
+
+.crm-quick-add-content label {
+	padding-top: 4px;
+}
+
+.crm-quick-add-content .control-group {
+	padding-right: 8px;
+	height: 30px;
+}
 
 
 

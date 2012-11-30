@@ -12,7 +12,10 @@
 		<link href="css/nubis.css" rel="stylesheet">
 		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
 		<script src="js/vendor/jquery-1.8.2.min.js"></script>
-		<script src="js/bootstrap.js"></script>
+		<script src="js/vendor/bootstrap.js"></script>
+		<script src="js/vendor/underscore.js"></script>
+		<script src="js/vendor/backbone.js"></script>
+		<script src="js/vendor/backbone-storage.js"></script>
        
     </head>
     <body class="crm-body">
@@ -54,16 +57,16 @@
 		</header>
 		<div class="tabbable crm-content"> <!-- Only required for left/right tabs -->
 		  <ul class="nav nav-tabs crm-tab-buttons">
-			<li class="active"><a href="#tab1" data-toggle="tab">Task board</a></li>
+			<li ><a href="#tab1" data-toggle="tab">Task board</a></li>
 			<li><a href="#tab2" data-toggle="tab">Calendar</a></li>
 			<li><a href="#tab3" data-toggle="tab">Deals</a></li>
-			<li><a href="#tab4" data-toggle="tab">Contacts</a></li>
+			<li class="active"><a href="#tab4" data-toggle="tab">Contacts</a></li>
 			<li><a href="#tab5" data-toggle="tab">Docs</a></li>
 			<li><a href="#tab6" data-toggle="tab">Calls</a></li>
 			<li><a href="#tab7" data-toggle="tab">Billing</a></li>
 		  </ul>
 		  <div class="tab-content">
-			<div class="tab-pane active" id="tab1">
+			<div class="tab-pane " id="tab1">
 				<div class="crm-task-board">
 					<div class="navbar">
 					  <div class="navbar-inner">
@@ -621,7 +624,7 @@
 			
 			<!-- CONTACTS -->
 			
-			<div class="tab-pane crm-contacts" id="tab4">
+			<div class="tab-pane active crm-contacts" id="tab4">
 				
 				<!-- CONTACTS Menu-->
 			
@@ -677,19 +680,43 @@
 				<div class="container-fluid">
 					<div class="row-fluid">
 					<div class="span2 crm-contacts-sidebar">
-					<ul class="nav nav-list">
-						<li class="nav-header">Contact groups</li>
-						<li><i class="icon-folder-close icon"></i><a href="#">ALL</a></li>
-						<li class="active"><i class="icon-folder-close icon nested"></i><a href="#">Group 1</a></li>
-						<li><i class="icon-folder-close icon nested"></i><a href="#">Group 2</a></li>
-						<li><i class="icon-folder-close icon nested"></i><a href="#">Group 3</a></li>
-						<li><i class="icon-folder-close icon nested"></i><a href="#">Group 4</a></li>
-						<li><i class="icon-folder-close icon nested"></i><a href="#">Other</a></li>
-					</ul>
+					
+					<!-- Quick Add -->
+					
+					<div> 
+						<div class="crm-quick-add-capture"> Quick Add </div>
+						<div id="quickAddContent" class="crm-quick-add-content">
+							<div class="control-group">
+							  <label class="control-label  pull-left" for="inputName">Name</label>
+							  <div class="controls pull-right">
+								<input type="text" id="inputName">
+								<span class="help-inline" style="display: none;">Incorect name...</span>
+							  </div>
+							</div>
+							<div class="control-group">
+							  <label class="control-label pull-left" for="inputEmail">Email</label>
+							  <div class="controls pull-right">
+								<input type="text" id="inputEmail">
+							  </div>
+							</div>
+							<div class="control-group">
+							  <label class="control-label pull-left" for="inputPhone">Phone</label>
+							  <div class="controls pull-right">
+								<input type="text" id="inputPhone">
+							  </div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<!-- backbone test -->
+					<div class="btn" id="new-contact">Add</div>
+					<div class="btn" id="clear">Clear</div>
+					
 				</div>
 				
 					<div class="span10">
-							<table class="crm-docs-table" cellspacing="0" cellpadding="0">							
+							<table class="crm-docs-table table table-striped" cellspacing="0" cellpadding="0" id="crm-contacts">							
 								<thead>
 									<tr class="crm-header">
 										<th>
@@ -706,7 +733,7 @@
 										</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody id="crm-contacts-container">
 									<tr>
 										<td>
 											Vasya Pupkin
@@ -733,20 +760,6 @@
 										</td>
 										<td>
 											06234266666
-										</td>
-									</tr>
-									<tr>
-										<td>
-											Stepan Opnana
-										</td>
-										<td>
-											Soqeel
-										</td>
-										<td>
-											stepan.opnana@soqeel.com
-										</td>
-										<td>
-											063666662346
 										</td>
 									</tr>									
 							</table>
@@ -1022,6 +1035,28 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+		
+		
+		
+		<script type="text/template" id="contact-item-template">
+				<td>
+					<%- name %>
+				</td>
+				<td>
+					Soqeel
+				</td>
+				<td>
+					<%- email %>
+				</td>
+				<td>
+					<%- phone %>
+				</td>
+		</script>
+
+		 <script src="js/crm/contacts.js"></script>
+		
+
+		
 
     </body>
 </html>
