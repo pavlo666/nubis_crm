@@ -68,7 +68,7 @@ $(function(){
 
     events: {
       "click #new-contact":  "createQuick",
-      "click #clear": "clearCompleted"
+      "click #delete-contact": "clearCompleted"
     },
 
     initialize: function() {
@@ -76,6 +76,7 @@ $(function(){
 	  this.inputEmail = this.$("#inputEmail");
 	  this.inputPhone = this.$("#inputPhone");
       Contacts.bind('add', this.addOne, this);
+	  Contacts.bind('reset', this.addAll, this);
       Contacts.fetch();
     },
 
@@ -85,6 +86,10 @@ $(function(){
       var view = new ContactView({model: contact});
       this.$("#crm-contacts-container").append(view.render().el);
     },
+	
+	addAll: function(){
+		Contacts.each(this.addOne); // TODO looks quite bad - refresh DOM on each item.
+	},
 
     createQuick: function(e) {
       if (!this.inputName.val()) return;

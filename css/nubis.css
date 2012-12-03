@@ -190,5 +190,11 @@ html {
 	text-align: center;
 }
 
+.crm-sidebar .controls {
+	padding-right: 12px;
+}
 
+.crm-sidebar .controls input {
+	width: 100%;
+}
 
