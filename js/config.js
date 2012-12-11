@@ -5,7 +5,6 @@ require.config({
 	baseUrl: "js",
 
 	paths: {
-		bootstrap: "libs/bootstrap"
 		jquery: "libs/jquery-1.8.2.min",
 		lodash: "libs/lodash.min",
 		backbone: "libs/backbone",
@@ -14,10 +13,6 @@ require.config({
 	},
 
 	shim: {
-		bootsrtap: {
-			 deps: ["jquery"],
-			 exports: "$.fn.popover"
-		},
 		backbone: {
 			deps: ["lodash", "jquery"],
 			exports: "Backbone"

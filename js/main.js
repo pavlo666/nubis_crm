@@ -1,6 +1,6 @@
-require(['jquery',	'lodash', 'backbone', 'crm/contacts/contact-view', "crm/contacts/contact-collection"],
+require(['lodash', 'backbone', 'crm/contacts/contact-view', "crm/contacts/contact-collection"],
 
-	function ($, _, Backbone, ContactsView, ContactList) {
+	function (_, Backbone, ContactsView, ContactList) {
 
 		Backbone.View.prototype.close = function() {
 			console.log('Closing view ' + this);

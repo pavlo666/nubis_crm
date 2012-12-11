@@ -1,6 +1,6 @@
-define( ['jquery', 'lodash', 'backbone', 'backboneStorage', 'crm/contacts/contact-model'],
+define( ['lodash', 'backbone', 'backboneStorage', 'crm/contacts/contact-model'],
 
-	function($, _, Backbone, Store, Contact) {
+	function( _, Backbone, Store, Contact) {
 
 		var ContactList = Backbone.Collection.extend({
 		

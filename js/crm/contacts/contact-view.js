@@ -1,7 +1,7 @@
-define(['jquery', 'lodash', 'backbone', 
+define(['lodash', 'backbone', 
 		'text!templates/contacts/contact-item.htm', "text!templates/contacts/contact-view.htm"],
 		
-	function($, _, Backbone, contactTpl, contactsTpl) {
+	function(_, Backbone, contactTpl, contactsTpl) {
 	
 		var ContactView = Backbone.View.extend({
 
@@ -50,7 +50,7 @@ define(['jquery', 'lodash', 'backbone',
 				this.inputEmail = this.$("#inputEmail");
 				this.inputPhone = this.$("#inputPhone");
 					  
-				//this.model.fetch();
+				this.addAll();
 			},
 
 			addOne: function(contact) {

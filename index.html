@@ -11,6 +11,10 @@
         <meta name="viewport" content="width=device-width">
 		<link href="css/nubis.css" rel="stylesheet">
 		<link href="css/bootstrap.css" rel="stylesheet" media="screen">     
+		
+		<script src="js/libs/jquery-1.8.2.min.js"></script>		
+		<script src="js/libs/bootstrap.js"></script>		
+		
     </head>
     <body class="crm-body">
         <!--[if lt IE 7]>
@@ -51,7 +55,7 @@
 		</header>
 		<div class="tabbable crm-content"> 
 		  <ul class="nav nav-tabs crm-tab-buttons">
-			<li ><a href="#tasks" data-toggle="tab">Task board</a></li>
+			<li class="active"><a href="#tasks" data-toggle="tab">Task board</a></li>
 			<li><a href="#calendar" data-toggle="tab">Calendar</a></li>
 			<li><a href="#deals" data-toggle="tab">Deals</a></li>
 			<li><a href="#contacts" data-toggle="tab">Contacts</a></li>
@@ -61,7 +65,7 @@
 			<li><a href="#journal" data-toggle="tab">Journal</a></li>
 		  </ul>
 		  <div class="tab-content">
-			<div class="tab-pane" id="tasks"></div>
+			<div class="tab-pane active" id="tasks"></div>
 			<div class="tab-pane" id="calendar"></div>			
 			<div class="tab-pane crm-deals" id="deals"></div>			
 			<div class="tab-pane crm-contacts" id="contacts"></div>
@@ -79,7 +83,7 @@
 		</footer>
 
 		<script data-main="js/config" src="js/libs/require.js"></script>		
-        <script src="js/plugins.js"></script>
+		
         
     </body>
 </html>

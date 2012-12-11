@@ -1,6 +1,6 @@
-define ( ['jquery', 'lodash', 'backbone'],
+define ( ['lodash', 'backbone'],
 	
-	function($, _, Backbone) {
+	function(_, Backbone) {
 		var Contact = Backbone.Model.extend({
 			clear: function() {
 				this.destroy();
