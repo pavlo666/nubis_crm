@@ -1598,16 +1598,6 @@
 
   $.fn.tab.Constructor = Tab
 
-
- /* TAB DATA-API
-  * ============ */
-
-  $(document).on('click.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
-    // Do not prevent action on tab!!!
-	//e.preventDefault() 
-    $(this).tab('show')
-  })
-
 }(window.jQuery);/* =============================================================
  * bootstrap-typeahead.js v2.2.1
  * http://twitter.github.com/bootstrap/javascript.html#typeahead

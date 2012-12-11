@@ -13,15 +13,30 @@ require(['lodash', 'backbone', 'crm/contacts/contact-view', "crm/contacts/contac
 		
 		var AppRouter = Backbone.Router.extend({
 			routes: {
-				"tasks": "tasks",
-				"contacts": "contacts"
+				"tasks": "tasks",				
+				"calendar" : "calendar",
+				"deals" : "deals",
+				"contacts": "contacts",
 			},
 			
 			tasks: function() {
-				console.log("Task");
+				$('a[href="#tasks"]').tab('show');
+				// TODO
 			},
 			
+			calendar: function() {
+				$('a[href="#calendar"]').tab('show');
+				// TODO
+			},
+			
+			
+			deals: function() {
+				$('a[href="#deals"]').tab('show');
+				// TODO
+			},
+						
 			contacts: function() {
+				$('a[href="#contacts"]').tab('show');
 				if (!this.contactList) {
 					this.contactList = new ContactList();
 					var self = this;
