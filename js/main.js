@@ -1,6 +1,13 @@
-require(['lodash', 'backbone', 'crm/contacts/contact-view', "crm/contacts/contact-collection"],
+require(['lodash', 'backbone', 
+		'crm/contacts/contact-view', "crm/contacts/contact-collection",
+		'crm/deals/deal-view', 'crm/calendar/calendar-view',
+		'crm/calls/call-view', 'crm/billing/billing-view',
+		'crm/tasks/task-view', 'crm/journal/journal-view', 
+		'crm/docs/docs-view'
+		],
 
-	function (_, Backbone, ContactsView, ContactList) {
+	function (_, Backbone, ContactsView, ContactList,
+			DealsView, CalendarView, CallsView, BillingView, TasksView, JournalView, DocsView) {
 
 		Backbone.View.prototype.close = function() {
 			console.log('Closing view ' + this);
@@ -21,23 +28,21 @@ require(['lodash', 'backbone', 'crm/contacts/contact-view', "crm/contacts/contac
 				"calls": "calls",
 				"billing": "billing",
 				"journal": "journal"
-			},
-			
-			
+			},	
+		
 			tasks: function() {
 				$('a[href="#tasks"]').tab('show');
-				// TODO
+				new TasksView().render();
 			},
 			
 			calendar: function() {
 				$('a[href="#calendar"]').tab('show');
-				// TODO
-			},
-			
-			
+				new CalendarView().render();
+			},			
+		
 			deals: function() {
 				$('a[href="#deals"]').tab('show');
-				// TODO
+				new DealsView().render();
 			},
 						
 			contacts: function() {
@@ -57,23 +62,22 @@ require(['lodash', 'backbone', 'crm/contacts/contact-view', "crm/contacts/contac
 			
 			docs: function() {
 				$('a[href="#docs"]').tab('show');
-				// TODO
+				new DocsView();
 			},
 			
 			calls: function() {
 				$('a[href="#calls"]').tab('show');
-				// TODO
-			},
-			
+				new CallsView().render();
+			},			
 			
 			billing: function() {
 				$('a[href="#billing"]').tab('show');
-				// TODO
+				new BillingView().render();
 			},
 			
 			journal: function() {
 				$('a[href="#journal"]').tab('show');
-				// TODO
+				new JournalView().render();
 			},
 			
 		});
