@@ -178,23 +178,16 @@ html {
 	height: 40px;
 }
 
-.crm-sidebar {
-	background: #f9f9f9;
-	border: 1px solid #CCC;
-	border-radius: 4px;
-	margin-bottom: 20px;
-	padding: 8px;
-}
-
-.crm-sidebar .crm-sidebar-header {
+.crm-sidebar-header {
 	text-align: center;
+	font-size: 14pt;
 }
 
-.crm-sidebar .controls {
+.crm-sidebar-controls {
 	padding-right: 12px;
 }
 
-.crm-sidebar .controls input {
+.crm-sidebar-controls input {
 	width: 100%;
 }
 
