@@ -1603,7 +1603,8 @@
   * ============ */
 
   $(document).on('click.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
-    e.preventDefault()
+    // Do not prevent action on tab!!!
+	//e.preventDefault() 
     $(this).tab('show')
   })
 
