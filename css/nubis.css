@@ -29,7 +29,7 @@ html {
 	margin-bottom: 10px;
 }
 
-.crm-task-board, .crm-calendar, .crm-docs, .crm-contacts, .crm-deals, .crm-calls {
+.crm-task-board, .crm-calendar, .crm-docs, .crm-calls {
 	padding: 0 10px;
 }
 
@@ -83,19 +83,6 @@ html {
 .crm-calendar .crm-calendar-sidebar.span2 {
 	border-right: 1px solid #CCC;
 	min-height: 380px;
-}
-
-.crm-deals-content {
-	width : 100%;
-}
-
-.crm-deals-header {
-	text-align: left;
-	border-bottom: 1px solid #CCC;
-}
-
-.crm-deals-content TR {
-	height: 25px;
 }
 
 .crm-side-calendar {
@@ -190,4 +177,3 @@ html {
 .crm-sidebar-controls input {
 	width: 100%;
 }
-

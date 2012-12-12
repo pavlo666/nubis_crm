@@ -1,122 +1,105 @@
-<!-- DEALS Menu-->
-			
-				<div class="navbar">
-					  <div class="navbar-inner">
-						<div class="container">						  
-						  <div class="nav-collapse collapse navbar-responsive-collapse">
-							<ul class="nav">
-							  <li><a href="#">All</a></li>
-							  <li class="divider-vertical"></li>
-							  <li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Assignee <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-								  <li><a href="#">Dima</a></li>
-								  <li><a href="#">Ostap</a></li>
-								  <li><a href="#">Pavlo</a></li>
-								</ul>
-							  </li>
-							  <li class="divider-vertical"></li>
-						  </ul>
-							<form class="navbar-search pull-left">
-								<input type="text" class="search-query" placeholder="Search">
-							</form>
-							<ul class="nav pull-right">
-							  <li><a href="#">New</a></li>
-							  <li class="divider-vertical"></li>
-							  <li><a href="#">Delete</a></li>
-							  <li class="divider-vertical"></li>
-							  <li><a href="#">Advanced Filter</a></li>
-							  <li class="divider-vertical"></li>
-							  <li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-								  <li><a href="#">Display Options</a></li>
-								  <li class="divider"></li>
-								  <li><a href="#">Advanced Options</a></li>
-								</ul>
-							  </li>
-							</ul>
-						  </div><!-- /.nav-collapse -->
-						</div>
-					  </div><!-- /navbar-inner -->
+<div class="container-fluid">
+	<div class="row-fluid">
+	
+	<!-- Side Bar -->
+	<div class="span2">
+		<!-- Quick Add -->
+		<div class="well">
+		  <div class="crm-sidebar-header">Quick Add</div>
+		  <div>
+				<div class="control-group">
+					<label class="control-label" for="inputTitle">Title</label>
+					<div class="crm-sidebar-controls">
+						<input type="text" id="inputName"/>
+						<span class="help-inline" style="display: none;">Incorect title...</span>
 					</div>
-			
-				<!-- DEALS Content -->
-				
-					<table class="crm-deals-content" cellspacing="0" cellpadding="0">							
-								<thead>
-									<tr class="crm-deals-header">
-										<th>
-											Title
-										</th>
-										<th>
-											Main contact
-										</th>
-										<th>
-											Company name
-										</th>
-										<th>
-											Status
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<a>CRM</a>
-										</td>
-										<td>
-											Pavlo
-										</td>
-										<td>
-											Soqeel
-										</td>
-										<td>
-											In Progress
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<a>Other deal</a>
-										</td>
-										<td>
-											Dima
-										</td>
-										<td>
-											Soqeel
-										</td>
-										<td>
-											In Progress
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<a>CRM ProjectPlan.mpp</a>
-										</td>
-										<td>
-											Pavlo
-										</td>
-										<td>
-											Soqeel
-										</td>
-										<td>
-											Closed
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<a>CRM SDD.docx</a>
-										</td>
-										<td>
-											Pavlo
-										</td>
-										<td>
-											Soqeel
-										</td>
-										<td>
-											Closed
-										</td>
-									</tr>									
-							</table>
-				
-				
+				</div>
+				<div class="control-group">
+				  <label class="control-label" for="inputContact">Contact</label>
+				  <div class="crm-sidebar-controls">
+					<input type="text" id="inputEmail">
+				  </div>
+				</div>
+				<div class="control-group">
+				  <label class="control-label" for="inputPhone">Company</label>
+				  <div class="crm-sidebar-controls">
+					<input type="text" id="inputPhone">
+				  </div>
+				</div>
+			<div class="btn" id="new-contact">Add</div>
+			<div class="btn" id="clear">Advanced Add</div>
+		  </div>
+		</div>
+		
+		<!-- Filter -->
+		<div class="well">
+		  <div class="crm-sidebar-header">Filter</div>
+		</div>	
+	</div>
+
+	<div class="span10">
+	
+	<div class="navbar">
+	  <div class="navbar-inner">
+		<div class="container">						  
+		  <div class="nav-collapse collapse navbar-responsive-collapse">
+			<ul class="nav">
+			  <li>
+				<a href="#">
+					<label class="checkbox">
+						<input type="checkbox" value="">
+						All										
+					</label>	
+				</a>									
+			  </li>
+			  <li class="divider-vertical"></li>
+			  <li><a id="delete-contact">Delete</a></li>
+			  <li class="divider-vertical"></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Assignee <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Dima</a></li>
+							<li><a href="#">Ostap</a></li>
+							<li><a href="#">Pavlo</a></li>
+						</ul>
+					</li>
+		  </ul>
+			<form class="navbar-search pull-left">
+				<input type="text" class="search-query" placeholder="Search">
+			</form>
+			<ul class="nav pull-right">
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+				  <li><a href="#">Display Options</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">Advanced Options</a></li>
+				</ul>
+			  </li>
+			</ul>
+		  </div><!-- /.nav-collapse -->
+		</div>
+	  </div><!-- /navbar-inner -->
+	</div>
+			<table class="crm-docs-table table table-striped" cellspacing="0" cellpadding="0" id="crm-contacts">							
+				<thead>
+					<tr class="crm-header">
+						<th>
+							Title
+						</th>
+						<th>
+							Main contact
+						</th>
+						<th>
+							Company name
+						</th>
+						<th>
+							Status
+						</th>
+					</tr>
+				</thead>
+				<tbody id="crm-contacts-container"></tbody>						
+			</table>
+		</div>
+	</div>
+</div>
