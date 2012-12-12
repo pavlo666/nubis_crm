@@ -1,7 +1,8 @@
 define(['lodash', 'backbone', 
+		'crm/general/quick-add-view',
 		'text!templates/contacts/contact-item.htm', "text!templates/contacts/contact-view.htm"],
 		
-	function(_, Backbone, contactTpl, contactsTpl) {
+	function(_, Backbone, QuickAddView, contactTpl, contactsTpl) {
 	
 		var ContactView = Backbone.View.extend({
 
@@ -42,6 +43,7 @@ define(['lodash', 'backbone',
 
 			initialize: function() {
 				$(this.el).html(this.template());
+				new QuickAddView({el: $("#contact-sidebar"), items: ["Name", "Email", "Phone"]});
 
 				this.model.bind('add', this.addOne, this);
 				this.model.bind('reset', this.addAll, this);
