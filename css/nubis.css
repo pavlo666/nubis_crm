@@ -1,0 +1,179 @@
+html {
+	height: 100%;
+}
+
+.crm-header {
+	padding-top: 45px;
+}
+
+.crm-body{
+	color: #555;
+	background-color: #CCC;
+	height: 100%;
+}
+
+.crm-content.tabbable{
+	margin: 0 10px;
+	color: #000;
+	height: 75%;
+	min-height: 500px;
+	background-color: #FFF;
+}
+
+.crm-footer {
+	padding: 25px 0;
+}
+
+.crm-tab-buttons.nav {
+	background-color: #EEE;
+	margin-bottom: 10px;
+}
+
+.crm-task-board, .crm-calendar, .crm-docs, .crm-calls {
+	padding: 0 10px;
+}
+
+.crm-task-content .crm-task-container {
+	list-style: none;
+	min-height: 335px;
+	border-right: 1px solid #CCC;
+	margin-left: 10px;
+}
+
+.crm-task-content .lead {
+	border-bottom: 1px solid #CCC;
+	margin-left: 10px;
+}
+
+.crm-task-content .crm-task {
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	margin: 5px 10px;
+	padding: 5px 10px;
+	min-height: 30px;
+	background-color: #EEE;
+}
+.crm-task .crm-description {
+	line-height: 30px;
+}
+
+.crm-docs .crm-doc-sidebar.span2, .crm-calls .crm-calls-sidebar.span2{
+	border-right: 1px solid #CCC;
+	min-height: 380px;
+}
+
+.crm-docs-table {
+	width: 100%;
+}
+
+.crm-docs-table .crm-header{	
+	height: 30px;
+	text-align: left;
+}
+
+.nav-list .icon-folder-close.icon{
+	float: left;
+	margin: 5px 5px 0 0;
+}
+
+.nav-list .icon-folder-close.icon.nested {
+	margin-left: 20px;
+}
+
+.crm-calendar .crm-calendar-sidebar.span2 {
+	border-right: 1px solid #CCC;
+	min-height: 380px;
+}
+
+.crm-side-calendar {
+	margin-right: 20px;
+}
+
+.nav-list.crm-calendar-list {
+	margin-top: 20px;
+	border-top: solid 1px #CCC;
+}
+
+.crm-calendar-list .nested {
+	margin-left: 20px;
+}
+
+.crm-side-calendar .crm-side-table {
+	width: 100%;
+	background-color: #EEE;
+	line-height: 25px;
+}
+
+.crm-side-calendar .crm-side-table TD {
+	text-align: center;
+}
+
+.calendar-header {
+	width: 100%;
+}
+
+.calendar-header .all-day {
+	height: 10px;
+}
+
+.calendar-header .all-day TD {
+	border: 1px solid #DDD;
+}
+
+.calendar-header .separator {
+	height: 5px;
+}
+
+.calendar-header .cal-tz {
+	width: 60px;
+	vertical-align: bottom;
+	font-size: 9pt;
+	text-align: center;
+}
+
+.calendar-header  .cal-row {
+	height: 20px;
+}
+
+.calendar-header  .cal-row TD {
+	border: 1px solid #DDD;
+	border-bottom: 0;
+}
+
+.calendar-header  .cal-row-odd TD {
+	border-bottom: 1px solid #DDD;
+	border-top:1px dotted #DDD;
+}
+
+.calendar-header  .cal-hours {
+	width: 60px;
+	text-align: right;
+	font-size: 9pt;
+}
+
+.cal-event-cont {
+	position: relative;
+}
+
+.cal-event-cont .cal-event {
+	background: #c5d7ff;
+	position: absolute;
+	top: -6px;
+	border: 1px solid #87acff;
+	border-radius: 4px;
+	width: 100%;
+	height: 40px;
+}
+
+.crm-sidebar-header {
+	text-align: center;
+	font-size: 14pt;
+}
+
+.crm-sidebar-controls {
+	padding-right: 12px;
+}
+
+.crm-sidebar-controls input {
+	width: 100%;
+}
