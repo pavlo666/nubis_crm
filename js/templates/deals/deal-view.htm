@@ -19,13 +19,13 @@
 			  <li>
 				<a href="#">
 					<label class="checkbox">
-						<input type="checkbox" value="">
+						<input id="all_checkbox" class="unchecked" type="checkbox" value="">
 						All										
 					</label>	
 				</a>									
 			  </li>
 			  <li class="divider-vertical"></li>
-			  <li><a id="delete-contact">Delete</a></li>
+			  <li><a id="delete-item">Delete</a></li>
 			  <li class="divider-vertical"></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Assignee <b class="caret"></b></a>
@@ -53,9 +53,12 @@
 		</div>
 	  </div><!-- /navbar-inner -->
 	</div>
-			<table class="crm-docs-table table table-striped" cellspacing="0" cellpadding="0" id="crm-contacts">							
+			<table class="crm-docs-table table table-striped" cellspacing="0" cellpadding="0" id="crm-deals">							
 				<thead>
 					<tr class="crm-header">
+						<th>
+							
+						</th>
 						<th>
 							Title
 						</th>
@@ -66,12 +69,62 @@
 							Company name
 						</th>
 						<th>
+							Deal type
+						</th>
+						<th>
+							Description
+						</th>
+						<th>
 							Status
 						</th>
 					</tr>
 				</thead>
-				<tbody id="crm-contacts-container"></tbody>						
+				<tbody id="crm-deals-container"></tbody>						
 			</table>
 		</div>
 	</div>
+		<form id="myModal" class="modal hide fade well span8 advanced-deal-form" tab-index="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<h3 id="myModalLabel">Add a new Deal</h3>
+			</div>
+			<div class="modal-body">
+			  <div class="row">
+					<div class="span3">
+						<label>Title</label>
+						<input id="dealTitle" type="text" class="span3" placeholder="Deal title">
+						<label>Company</label>
+						<input id="dealClient" type="text" class="span3" placeholder="Company name">
+						<label>Contacts</label>
+						<input id="dealContacts" type="text" class="span3" placeholder="Client contacts">
+						<label>Status
+						<select id="dealStatus" name="dealStatus" class="span3">
+							<option value="new deal" selected="">new deal</option>
+							<option value="in progress">in progress</option>
+							<option value="done">done</option>
+							<option value="paid">paid</option>
+						</select>
+						</label>
+						<label>Deal type
+						<select id="dealType" name="dealType" class="span3">
+							<option value="simple" selected="">simple</option>
+							<option value="court">court</option>
+							<option value="registration">registration</option>
+							<option value="performance">performance</option>
+							<option value="consultation">consultation</option>
+							<option value="license">license</option>
+						</select>
+						</label>
+					</div>
+					<div class="span5">
+						<label>Description</label>
+						<textarea name="message" id="dealDescription" class="input-xlarge span5" rows="10"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+				<button id="save-new-deal" class="btn btn-primary pull-right">Save</button>
+			</div>
+		</form>
 </div>

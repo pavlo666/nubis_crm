@@ -183,3 +183,9 @@ html {
 .crm-sidebar-controls input {
 	width: 100%;
 }
+
+.advanced-deal-form{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}

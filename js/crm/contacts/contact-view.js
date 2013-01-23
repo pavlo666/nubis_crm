@@ -20,7 +20,7 @@ define(['lodash', 'backbone',
 			},
 
 			render: function() {
-				this.$el.html(this.template(this.model.toJSON()));      
+				this.$el.html( this.template(this.model.toJSON()) );
 				return this;
 			},
 
@@ -42,7 +42,7 @@ define(['lodash', 'backbone',
 			},
 
 			initialize: function() {
-				$(this.el).html(this.template());
+				$(this.el).html( this.template() );
 				new QuickAddView({el: $("#contact-sidebar"), items: ["Name", "Email", "Phone"]});
 
 				this.model.bind('add', this.addOne, this);

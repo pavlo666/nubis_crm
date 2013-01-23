@@ -1,20 +1,19 @@
-var Contact = Backbone.Model.extend({
-  
-	defaults: function() {
-		return {};
-	},
-
-	clear: function() {
-		this.destroy();
-	}
-});
-
-var ContactList = Backbone.Collection.extend({
+define ( ['lodash', 'backbone'],
 	
-	model: Contact,
-	
-	localStorage: new Store("contacts-crm")
+	function(_, Backbone) {
+		var Deal = Backbone.Model.extend({
+			
+			validate: function(attrs) {
+				if ( ! attrs.title || ! attrs.contact) {
+					return 'Every deal must have a title and contacts';
+				}
+			},
+			
+			clear: function() {
+				this.destroy();
+			}
+		});
 		
-});
-
-var Contacts = new ContactList;
+		return Deal;
+	}
+);

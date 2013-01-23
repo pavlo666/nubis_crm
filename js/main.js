@@ -1,16 +1,16 @@
 require(['lodash', 'backbone', 
 		'crm/contacts/contact-view', "crm/contacts/contact-collection",
-		'crm/deals/deal-view', 'crm/calendar/calendar-view',
+		'crm/deals/deal-view', 'crm/deals/deal-collection',
+		'crm/calendar/calendar-view',
 		'crm/calls/call-view', 'crm/billing/billing-view',
 		'crm/tasks/task-view', 'crm/journal/journal-view', 
 		'crm/docs/docs-view'
 		],
 
 	function (_, Backbone, ContactsView, ContactList,
-			DealsView, CalendarView, CallsView, BillingView, TasksView, JournalView, DocsView) {
+			DealsView, DealList, CalendarView, CallsView, BillingView, TasksView, JournalView, DocsView) {
 
 		Backbone.View.prototype.close = function() {
-			console.log('Closing view ' + this);
 			if (this.beforeClose) {
 				this.beforeClose();
 			}
@@ -42,7 +42,17 @@ require(['lodash', 'backbone',
 		
 			deals: function() {
 				$('a[href="#deals"]').tab('show');
-				new DealsView().render();
+				if (!this.dealList) {
+					this.dealList = new DealList();
+					var self = this;
+					this.dealList.fetch({
+						success: function() {
+							var dealList = new DealsView({
+								model: self.dealList
+							}).render();
+						}
+					});
+				}
 			},
 						
 			contacts: function() {
