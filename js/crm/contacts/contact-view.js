@@ -56,13 +56,14 @@ define(['lodash', 'backbone',
 			events: {
 				"click #new-contact":  "createQuick",
 				"click #delete-contact": "clearCompleted",
+				"click #save-new-contact": "saveNewContact",
 				"click #all_checkbox": "selectAllCheckboxes",
 				"click #save-edit-contact": "saveEditContact"
 			},
 
 			initialize: function() {
 				$(this.el).html( this.template() );
-				new QuickAddView({el: $("#contact-sidebar"), items: ["Name", "Email", "Phone"]});
+				new QuickAddView({el: $("#contact-sidebar"), items: ["Name", "Email", "Phone", "#advancedContact"]});
 
 				this.model.bind('add', this.addOne, this);
 				this.model.bind('reset', this.addAll, this);
@@ -71,6 +72,12 @@ define(['lodash', 'backbone',
 				this.inputName = this.$("#inputName");
 				this.inputEmail = this.$("#inputEmail");
 				this.inputPhone = this.$("#inputPhone");
+
+				//advanced dialog
+				this.contactName = this.$("#contactName");
+				this.contactEmail = this.$("#contactEmail");
+				this.contactClient = this.$("#contactClient");
+				this.contactPhone = this.$("#contactPhone");
 
 				//edit dialog
 				this.editName = this.$("#editName");
@@ -135,6 +142,27 @@ define(['lodash', 'backbone',
 				});
 
 				return false;
+			},
+
+			saveNewContact: function() {
+				if($("#contactName").val() == '') {
+					$(".text-error").removeClass("hidden");
+					return;
+				}
+				$(".text-error").addClass("hidden");
+				$("#advancedContact").modal('hide');
+				this.model.create({
+					checked: false,
+					name: this.contactName.val(),
+					client: this.contactClient.val(),
+					email: this.contactEmail.val(),
+					phone: this.contactPhone.val()
+				});
+
+				this.contactName.val('');
+				this.contactEmail.val('');
+				this.contactClient.val('');
+				this.contactPhone.val('');
 			},
 
 			saveEditContact: function() {

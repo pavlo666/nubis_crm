@@ -19,7 +19,7 @@
 			  <li>
 				<a href="#">
 					<label class="checkbox">
-						<input id="all_checkbox" class="unchecked" type="checkbox" value="">
+						<input id="all_checkbox" type="checkbox" value="">
 						All										
 					</label>	
 				</a>									
@@ -60,6 +60,9 @@
 							
 						</th>
 						<th>
+							
+						</th>
+						<th>
 							Title
 						</th>
 						<th>
@@ -83,48 +86,138 @@
 			</table>
 		</div>
 	</div>
-		<form id="myModal" class="modal hide fade well span8 advanced-deal-form" tab-index="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<form id="advancedDeal" class="modal advanced-deal-modal hide fade form-horizontal" tab-index="-1" role="dialog" aria-hidden="true">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
 				<h3 id="myModalLabel">Add a new Deal</h3>
 			</div>
 			<div class="modal-body">
 			  <div class="row">
-					<div class="span3">
-						<label>Title</label>
-						<input id="dealTitle" type="text" class="span3" placeholder="Deal title">
-						<label>Company</label>
-						<input id="dealClient" type="text" class="span3" placeholder="Company name">
-						<label>Contacts</label>
-						<input id="dealContacts" type="text" class="span3" placeholder="Client contacts">
-						<label>Status
-						<select id="dealStatus" name="dealStatus" class="span3">
-							<option value="new deal" selected="">new deal</option>
-							<option value="in progress">in progress</option>
-							<option value="done">done</option>
-							<option value="paid">paid</option>
-						</select>
-						</label>
-						<label>Deal type
-						<select id="dealType" name="dealType" class="span3">
-							<option value="simple" selected="">simple</option>
-							<option value="court">court</option>
-							<option value="registration">registration</option>
-							<option value="performance">performance</option>
-							<option value="consultation">consultation</option>
-							<option value="license">license</option>
-						</select>
-						</label>
-					</div>
-					<div class="span5">
-						<label>Description</label>
-						<textarea name="message" id="dealDescription" class="input-xlarge span5" rows="10"></textarea>
+					<div class="span9">
+						<div class="control-group">
+							<label class="control-label">Title</label>
+							<div class="controls">
+								<input id="dealTitle" type="text" class="span3">
+								<span class="inline-help">
+									<span class="text-error hidden">Title field cannot be empty.</span>
+								</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Company</label>
+							<div class="controls">
+								<input id="dealClient" type="text" class="span3">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Contacts</label>
+							<div class="controls">
+								<input id="dealContacts" type="text" class="span3">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Status</label>
+							<div class="controls">
+								<select id="dealStatus" class="span3">
+									<option value="new deal" selected="">new deal</option>
+									<option value="in progress">in progress</option>
+									<option value="done">done</option>
+									<option value="paid">paid</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Deal type</label>
+							<div class="controls">
+								<select id="dealType" class="span3">
+									<option value="simple" selected="">simple</option>
+									<option value="court">court</option>
+									<option value="registration">registration</option>
+									<option value="performance">performance</option>
+									<option value="consultation">consultation</option>
+									<option value="license">license</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Description</label>
+							<div class="controls">
+								<textarea id="dealDescription" class="input-xlarge span5" rows="10"></textarea>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="modal-footer">
 				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 				<button id="save-new-deal" class="btn btn-primary pull-right">Save</button>
+			</div>
+		</form>
+		<form id="editDeal" class="modal edit-deal-modal hide fade form-horizontal" tab-index="-1" role="dialog" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<h3 id="editModalLabel">Edit deal</h3>
+			</div>
+			<div class="modal-body">
+			  <div class="row">
+					<div class="span9">
+					<input id="editId" type="hidden">
+					<div class="control-group">
+						<label class="control-label">Title</label>
+						<div class="controls">
+							<input id="editTitle" type="text">
+							<span class="help-inline"><span class="hidden text-error">Title field cannot be empty.</span></span>
+						</div>
+					</div>
+						<div class="control-group">
+							<label class="control-label">Company</label>
+							<div class="controls">
+								<input id="editClient" type="text">	
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Contacts</label>
+							<div class="controls">
+								<input id="editContacts" type="text">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Status</label>
+							<div class="controls">
+								<select id="editStatus" name="dealStatus">
+									<option value="new deal" selected="">new deal</option>
+									<option value="in progress">in progress</option>
+									<option value="done">done</option>
+									<option value="paid">paid</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Deal type</label>
+							<div class="controls">
+								<select id="editType" name="dealType">
+									<option value="simple" selected="">simple</option>
+									<option value="court">court</option>
+									<option value="registration">registration</option>
+									<option value="performance">performance</option>
+									<option value="consultation">consultation</option>
+									<option value="license">license</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Description</label>
+							<div class="controls">
+								<textarea id="editDescription" class="input-xlarge span5" rows="10"></textarea>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+				<button id="save-edit-deal" class="btn btn-primary pull-right">Save</button>
 			</div>
 		</form>
 </div>

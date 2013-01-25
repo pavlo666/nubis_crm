@@ -184,8 +184,26 @@ html {
 	width: 100%;
 }
 
-.advanced-deal-form{
-	position: absolute;
-	top: 50%;
-	left: 50%;
+.hidden{
+	display: none;
+}
+
+.modal.advanced-deal-modal{
+	width: 740px;
+	margin: -250px 0 0 -370px;
+}
+
+.modal.edit-deal-modal{
+	width: 740px;
+	margin: -250px 0 0 -370px;	
+}
+
+.modal.advanced-contact-modal{
+	width: 720px;
+	margin: -250px 0 0 -360px;
+}
+
+.modal.edit-contact-modal{
+	width: 720px;
+	margin: -250px 0 0 -360px;
 }
